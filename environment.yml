@@ -2,13 +2,14 @@ name: cherokee-diffwave
 channels:
   - pytorch-lts
   - nvidia
+  - conda-forge
   - defaults
 dependencies:
   - _libgcc_mutex=0.1
   - _openmp_mutex=4.5
   - blas=1.0
   - bzip2=1.0.8
-  - ca-certificates=2021.10.26
+  - ca-certificates=2021.10.8
   - certifi=2021.10.8
   - cudatoolkit=11.1.74
   - ffmpeg=4.2.2
@@ -50,7 +51,9 @@ dependencies:
   - openssl=1.1.1l
   - pillow=8.4.0
   - pip=21.0.1
+  - pydub=0.25.1
   - python=3.7.11
+  - python_abi=3.7
   - pytorch=1.8.2
   - readline=8.1
   - setuptools=58.0.4
@@ -65,3 +68,6 @@ dependencies:
   - xz=5.2.5
   - zlib=1.2.11
   - zstd=1.4.9
+  - pip:
+    - diffwave==0.1.7
+    - tqdm==4.62.3
