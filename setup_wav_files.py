@@ -26,12 +26,12 @@ def main():
             print(f"=== {exec_filename}")
 
             script: str = f"""
-			eval "$(command conda 'shell.bash' 'hook' 2> /dev/null)"
-                        conda deactivate
-                        conda activate cherokee-diffwave
-                        python "{exec_filename}"            
-                        exit $?
-                        """
+                eval "$(command conda 'shell.bash' 'hook' 2> /dev/null)"
+                conda deactivate
+                conda activate cherokee-diffwave
+                python "{exec_filename}"            
+                exit $?
+            """
 
             cp: subprocess.CompletedProcess = subprocess.run(script, shell=True, executable="/bin/bash", check=True)
             if cp.returncode > 0:
@@ -57,12 +57,12 @@ def main():
                 wav_file = fields[3]
                 audio: AudioSegment = AudioSegment.from_file(os.path.join(all_dir, wav_file))
                 audio = audio.set_channels(1).set_frame_rate(22050)
-                sub_dir: str = f"{idx//1000:06d}"
+                sub_dir: str = f"{idx // 1000:06d}"
                 export_path = os.path.join("wavs", sub_dir)
                 os.makedirs(export_path, exist_ok=True)
                 audio.export(os.path.join(export_path, f"{idx:09d}.wav"), format="wav")
                 idx += 1
-        bar.update(bar.currval+1)
+        bar.update(bar.currval + 1)
     bar.finish()
     print("\n\n\n")
 
