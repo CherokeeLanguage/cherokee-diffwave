@@ -48,6 +48,6 @@ if __name__ == '__main__':
     parser.add_argument('--max_steps', default=None, type=int, help='maximum number of training steps')
     parser.add_argument('--fp16', action='store_true', default=False,
                         help='use 16-bit floating point operations for training')
-    parser.add_argument('--batch_size', action='store_true', default=16,
+    parser.add_argument('--batch_size', default=16,
                         help='specify batch size for training')
     main(parser.parse_args())
