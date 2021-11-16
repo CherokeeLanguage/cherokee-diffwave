@@ -26,8 +26,7 @@ def main():
             print(f"=== {exec_filename}")
 
             script: str = f"""
-                        PS1='$'
-                        . ~/.bashrc
+			eval "$(command conda 'shell.bash' 'hook' 2> /dev/null)"
                         conda deactivate
                         conda activate cherokee-diffwave
                         python "{exec_filename}"            
