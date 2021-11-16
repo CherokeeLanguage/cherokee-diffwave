@@ -1,0 +1,3 @@
+[submodule "cherokee-audio-data"]
+	path = cherokee-audio-data
+	url = ../cherokee-audio-data.git
