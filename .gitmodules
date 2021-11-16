@@ -4,3 +4,9 @@
 [submodule "diffwave"]
 	path = diffwave
 	url = ../../lmnt-com/diffwave.git
+[submodule "cherokee-audio-data-private"]
+	path = cherokee-audio-data-private
+	url = ../cherokee-audio-data-private.git
+[submodule "other-audio-data"]
+	path = other-audio-data
+	url = ../other-audio-data.git
