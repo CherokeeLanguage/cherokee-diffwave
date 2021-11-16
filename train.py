@@ -29,7 +29,7 @@ def _get_free_port():
 
 def main(args):
     replica_count = device_count()
-    params.batch_size = args.batch_size
+    params.batch_size = int(args.batch_size)
     if replica_count > 1:
         if params.batch_size % replica_count != 0:
             raise ValueError(f'Batch size {params.batch_size} is not evenly divisble by # GPUs {replica_count}.')
