@@ -116,5 +116,4 @@ dependencies:
   - zlib=1.2.11
   - zstd=1.4.9
   - pip:
-    - diffwave==0.1.7
     - tqdm==4.62.3
