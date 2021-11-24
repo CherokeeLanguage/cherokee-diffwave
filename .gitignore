@@ -1,2 +1,4 @@
 /wavs/
 models/
+/tmp/
+*.tar.gz
