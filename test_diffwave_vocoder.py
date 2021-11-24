@@ -38,7 +38,7 @@ def main():
     npy_files: List[str] = list()
     npy_files.extend(sorted(glob.glob("wavs/??????/*.wav.spec.npy")))
     ran = random.Random(0)
-    npy_files = ran.sample(npy_files, 10)
+    npy_files = ran.sample(npy_files, 100)
     bar: ProgressBar = progressbar.ProgressBar(maxval=len(npy_files))
     bar.start()
     npy_wav_files: List[Tuple[str, str, str]] = list()
